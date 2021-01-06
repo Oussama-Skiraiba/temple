@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --bck: #FF8C00;
+}
+body{
+    font-family: sans-serif;
+    height: 800vh;
+}
+
+/* my fram */
+
+header,nav ul,.slide-images{
+    display: flex;
+}
+header{
+    align-items: center
+}
+header,nav ul,.slide-images{
+    justify-content: space-between;
+}
+main,.content-silder{
+    position: relative;
+}
+main::after ,.content-silder>div , main >.fas, .slide-images{
+    position: absolute;
+
+}
+/* ma fhamtch 3lach main > fa */
+
+main >.fa-chevron-left{
+    left: 4%;
+}
+main >.fa-chevron-right{
+    right: 4%;
+}
+main >.fas{
+    top:50%;
+    font-size: 2rem;
+    z-index: 2;
+}
+main >.fas,.slide-images > div img,
+.icon-logen i{
+    cursor: pointer;
+}
+main >.fas 
+,header nav ul li a 
+,main .content-silder h1
+,.icon-silder i,
+.icon-logen i{
+    color: #fff;
+}
+.opc{
+    opacity: 0;
+}
+.borderRadius{
+    transform: translateY(-14px) scale(.7,.7);
+    border-radius:50%;
+    border: none !important;
+    filter: blur(1.8px) grayscale(50%);
+}
+
+.icon-silder i,.icon-logen i{
+    margin-left: 1.8rem;
+}
+
+/* end my frem */
+
+
+/* Start Header */
+header{
+    height: 10vh;
+    padding: 0 1rem;
+    background:var(--bck);
+}
+
+header img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* line-height: 60px    ; */
+}
+
+header nav{
+    width: 30%;
+}
+header nav ul li a{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    letter-spacing: .8px;
+}
+
+.icon-logen{
+    width: 12%;
+}
+.icon-logen i{
+    font-size: 1.5rem;
+}
+.icon-logen i:hover{
+    color: #333;
+}
+
+
+
+/* End Header*/
+
+/* Start Main */
+main{
+    background-image: url(../images/main.jpg);
+    height: 90vh;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+}
+main::after{
+    position: absolute;
+    background: rgba(58, 56, 52, 0.445);
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+main >.fas{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    transform: scale(1); 
+    transition: all 1s ease-in-out;
+}
+main >.fas:hover{
+    background: var(--bck);
+    transform: scale(.8);
+}
+main .content-silder{
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    z-index: 2;
+
+}
+main .content-silder > div{
+    width: 100%;
+    height:100%;
+    transition: all .7s ease-in-out;
+}
+main .content-silder{
+    text-align: center;
+
+}
+main .content-silder h1{
+    margin-top: 7rem;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2.5rem;
+
+}
+main .content-silder .icon-silder{
+    margin-top: 1.6rem;
+
+}
+.slide-images{
+    padding: .1rem;
+    width:70%;
+    left: 15%;
+    bottom: -40px;
+    z-index: 2;
+    background-color: #f9f9f9;
+}
+.slide-images > div{
+    width: calc(100% / 6.2);
+    height: 120px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    border: 1px dashed #fff;
+}
+.slide-images > div img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+/* End Main */
+
+
